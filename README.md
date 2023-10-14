@@ -1,3 +1,5 @@
+** link: 深度实战 Electron 开发本地音乐播放器 muke zhangxuan **
+
 # electron-quick-start
 
 **Clone and run for a quick way to see Electron in action.**
