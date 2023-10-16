@@ -3,14 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta
+    <!-- <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
-    />
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://use.fontawesome.com; style-src 'self' 'unsafe-inline'"
+    /> -->
     <link
       href="../node_modules/bootstrap/dist//css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      href="../node_modules/font-awesome/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/1c12ebc6a5.js"
+      crossorigin="anonymous"
+    ></script>
     <title>音乐播放器</title>
   </head>
   <body>
@@ -19,6 +27,7 @@
       <button id="add-music-button" class="btn btn-primary mt-4" type="button">
         添加歌曲到曲库
       </button>
+      <div id="tracksList" class="mt-4"></div>
     </div>
     <script>
       require("./index.js");

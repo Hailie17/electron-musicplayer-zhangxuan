@@ -28,6 +28,9 @@ class AppWindow extends BrowserWindow {
 
 app.on("ready", () => {
   const mainWindow = new AppWindow({}, "./renderer/index.html"); //主窗口
+  mainWindow.webContents.on("did-finish-load", () => {
+    mainWindow.send("getTracks", myStore.getTracks());
+  });
 
   //添加音乐窗口
   ipcMain.on("add-music-window", () => {
@@ -44,7 +47,7 @@ app.on("ready", () => {
   //添加音乐
   ipcMain.on("add-tracks", (event, tracks) => {
     const updatedTracks = myStore.addTracks(tracks).getTracks();
-    console.log(updatedTracks);
+    mainWindow.send("getTracks", updatedTracks);
   });
 
   //打开文件夹
