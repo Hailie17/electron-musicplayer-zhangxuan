@@ -11,17 +11,25 @@
       href="../node_modules/bootstrap/dist//css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <title>音乐播放器</title>
+    <title>添加歌曲到曲库</title>
   </head>
   <body>
     <div class="container d-grid gap-2 mt-4">
-      <h1 id="message">我的播放器</h1>
-      <button id="add-music-button" class="btn btn-primary mt-4" type="button">
-        添加歌曲到曲库
+      <h1 id="message">添加歌曲到曲库</h1>
+      <div id="musicList" class="mb-2">您还未选择任何音乐想</div>
+      <button
+        id="select-music"
+        class="btn btn-outline-primary btn-lg mt-4"
+        type="button"
+      >
+        添加歌曲
+      </button>
+      <button id="add-music" class="btn btn-primary btn-lg mt-4" type="button">
+        导入音乐
       </button>
     </div>
     <script>
-      require("./index.js");
+      require("./add.js");
     </script>
   </body>
 </html>
