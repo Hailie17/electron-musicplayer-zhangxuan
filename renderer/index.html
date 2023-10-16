@@ -5,7 +5,7 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
     />
     <link
       href="../node_modules/bootstrap/dist//css/bootstrap.min.css"
@@ -14,7 +14,14 @@
     <title>音乐播放器</title>
   </head>
   <body>
-    <h1 id="message">Hello World!</h1>
-    <script src="./renderer.js"></script>
+    <div class="container d-grid gap-2 mt-4">
+      <h1 id="message">我的播放器</h1>
+      <button id="add-music-button" class="btn btn-primary mt-4" type="button">
+        添加歌曲到曲库
+      </button>
+    </div>
+    <script>
+      require("./index.js");
+    </script>
   </body>
 </html>
