@@ -6,7 +6,7 @@ const myStore = new DataStore({ name: "myStore" });
 
 const store = new Store();
 
-//定义窗口类21
+//定义窗口类
 class AppWindow extends BrowserWindow {
   constructor(config, location) {
     const basicConfig = {
