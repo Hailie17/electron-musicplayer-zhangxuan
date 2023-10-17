@@ -50,6 +50,12 @@ app.on("ready", () => {
     mainWindow.send("getTracks", updatedTracks);
   });
 
+  // 接收删除音乐事件
+  ipcMain.on("delete-track", (event, id) => {
+    const updatedTracks = myStore.deleteTrack(id).getTracks();
+    mainWindow.send("getTracks", updatedTracks);
+  });
+
   //打开文件夹
   ipcMain.on("open-music-file", (event) => {
     dialog
