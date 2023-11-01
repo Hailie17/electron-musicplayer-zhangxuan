@@ -44,7 +44,7 @@ app.on("ready", () => {
     );
   });
 
-  //添加音乐
+  //接受添加音乐事件
   ipcMain.on("add-tracks", (event, tracks) => {
     const updatedTracks = myStore.addTracks(tracks).getTracks();
     mainWindow.send("getTracks", updatedTracks);
